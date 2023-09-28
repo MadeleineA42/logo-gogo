@@ -29,7 +29,7 @@ const questions = [
 
 async function main() {
     try {
-        const userInput = await inquirer.createPromptModule(questions);
+        const userInput = await inquirer.prompt(questions);
 
         //uses a switch statement to create an instance of selected shape class
         let selectedShape;
