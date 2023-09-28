@@ -1,6 +1,8 @@
 const fs = require('fs');
-const inquirer = require('fs');
+const inquirer = require('inquirer');
+const { Circle, Triangle, Square } = require('./lib/shapes');
 
+// questions the user will answer to generate the logo
 const questions = [
     {
         type: 'input',
@@ -13,9 +15,9 @@ const questions = [
         message: 'What color would you like the text in the logo to be?',
     },
     {
-        type: 'list',
+        type: 'checkbox',
         name: 'shape',
-        message: 'What shape would you like?',
+        message: 'Select the shape of the logo.',
         choices: ['Circle', 'Trianlge', 'Square'],
     },
     {
@@ -24,3 +26,35 @@ const questions = [
         message: 'What color would you like the shape to be?',
     },
 ];
+
+async function main() {
+    try {
+        const userInput = await inquirer.createPromptModule(questions);
+
+        //uses a switch statement to create an instance of selected shape class
+        let selectedShape;
+        switch (userInput.shape) {
+            case 'circle':
+                selectedShape = new Circle(userInput.shapeColor);
+                break;
+            case 'triangle':
+                selectedShape = new Triangle(userInput.shapecolor);
+                break;
+            case 'square':
+                selectedShape = new Square(userInput.shapeColor);
+                break;
+            default:
+                console.log('You must select a valid shape');
+                return;
+        }
+
+        //Generate SVG code and save it to logo.svg
+        const svgCode = selectedShape.render();
+        fs.writeFileSync('logo.svg', svgCode);
+
+        console.log('Generated logo.svg file');
+    } catch (error) {
+        console.error('An error occured', error);
+    }
+}
+main();
