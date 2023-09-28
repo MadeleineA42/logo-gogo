@@ -21,3 +21,6 @@ THEN an SVG file is created named `logo.svg`
 AND the output text "Generated logo.svg" is printed in the command line
 WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
+
+## MockUp
+<img src="./images/Screenshot 2023-09-21 at 3.28.29 PM.png" alt="mockup of assignment">
