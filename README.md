@@ -1,5 +1,5 @@
 # logo-gogo
-
+This command line project asks a series of questions to a user. Then is generates a logo based on that users input.
 
 ## User Story
 AS a freelance web developer
@@ -24,3 +24,6 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## MockUp
 <img src="./images/Screenshot 2023-09-21 at 3.28.29 PM.png" alt="mockup of assignment">
+
+## Walkthrough
+Click the <a href=#>link</a> to see the video walkthrough.
