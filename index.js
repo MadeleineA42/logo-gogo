@@ -12,7 +12,7 @@ const questions = [
     {
         type: 'input',
         name: 'textColor',
-        message: 'What color would you like the text in the logo to be?',
+        message: 'What color would you like the TEXT in the logo to be?',
     },
     {
         type: 'checkbox',
@@ -23,7 +23,7 @@ const questions = [
     {
         type: 'input',
         name: 'shapeColor',
-        message: 'What color would you like the shape to be?',
+        message: 'What color would you like the SHAPE to be?',
     },
 ];
 
