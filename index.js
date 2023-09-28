@@ -18,7 +18,7 @@ const questions = [
         type: 'checkbox',
         name: 'shape',
         message: 'Select the shape of the logo.',
-        choices: ['Circle', 'Trianlge', 'Square'],
+        choices: ['Circle', 'Triangle', 'Square'],
     },
     {
         type: 'input',
@@ -38,7 +38,7 @@ async function main() {
                 selectedShape = new Circle(userInput.shapeColor);
                 break;
             case 'triangle':
-                selectedShape = new Triangle(userInput.shapecolor);
+                selectedShape = new Triangle(userInput.shapeColor);
                 break;
             case 'square':
                 selectedShape = new Square(userInput.shapeColor);
