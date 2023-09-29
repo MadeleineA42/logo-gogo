@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { Circle, Triangle, Square } = require('./lib/shapes');
+const { Circle, Triangle, Square } = require('./lib');
 
 // questions the user will answer to generate the logo
 const questions = [
