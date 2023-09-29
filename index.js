@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const { Circle, Triangle, Square } = require('./lib');
+const { log } = require('console');
 
 // questions the user will answer to generate the logo
 const questions = [
@@ -15,7 +16,7 @@ const questions = [
         message: 'What color would you like the TEXT in the logo to be?',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'shape',
         message: 'Select the shape of the logo.',
         choices: ['circle', 'triangle', 'square'],
@@ -30,7 +31,6 @@ const questions = [
 async function main() {
     try {
         const userInput = await inquirer.prompt(questions);
-
         //uses a switch statement to create an instance of selected shape class
         let selectedShape;
         switch (userInput.shape) {
