@@ -18,7 +18,7 @@ const questions = [
         type: 'checkbox',
         name: 'shape',
         message: 'Select the shape of the logo.',
-        choices: ['Circle', 'Triangle', 'Square'],
+        choices: ['circle', 'triangle', 'square'],
     },
     {
         type: 'input',
