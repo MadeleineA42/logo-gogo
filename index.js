@@ -1,3 +1,4 @@
+//files required to run the code properly
 const fs = require('fs');
 const inquirer = require('inquirer');
 const { Circle, Triangle, Square } = require('./lib');
@@ -48,14 +49,14 @@ async function main() {
                 return;
         }
 
-        //Generate SVG code and save it to logo.svg
-        
+        //will render each shape depending on what the user input
         const svgCode = `<svg version="1.1"
         width="300" height="200"
         xmlns="http://www.w3.org/2000/svg">
         ${selectedShape.render()}
         <text x="150" y="125" font-size="40" text-anchor="middle" fill="${userInput.textColor}">${userInput.text}</text>
 </svg>`;
+        //generated logo will create a new logo.svg file
         fs.writeFileSync('logo.svg', svgCode);
 
         console.log('Generated logo.svg file');
