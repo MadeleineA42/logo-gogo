@@ -54,7 +54,7 @@ async function main() {
         width="300" height="200"
         xmlns="http://www.w3.org/2000/svg">
         ${selectedShape.render()}
-        <text x="150" y="125" font-size="50" text-anchor="middle" fill="${userInput.textColor}">${userInput.text}</text>
+        <text x="150" y="125" font-size="40" text-anchor="middle" fill="${userInput.textColor}">${userInput.text}</text>
 </svg>`;
         fs.writeFileSync('logo.svg', svgCode);
 
